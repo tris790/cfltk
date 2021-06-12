@@ -11,7 +11,7 @@ typedef struct Fl_Widget_Tracker Fl_Widget_Tracker;
 
 typedef void (*Fl_Awake_Handler)(void *data);
 
-typedef void (*Fl_System_Handler)(void *data);
+typedef int (*Fl_System_Handler)(void *data);
 
 int Fl_run(void);
 
