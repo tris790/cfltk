@@ -658,3 +658,7 @@ void Fl_unload_font(const char *path) {
     v_unload_private_font(path);
 #endif
 }
+
+void Fl_add_system_handler(Fl_System_Handler handler, void *data) {
+    Fl::add_system_handler(handler, data);
+}

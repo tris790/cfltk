@@ -11,6 +11,8 @@ typedef struct Fl_Widget_Tracker Fl_Widget_Tracker;
 
 typedef void (*Fl_Awake_Handler)(void *data);
 
+typedef void (*Fl_System_Handler)(void *data);
+
 int Fl_run(void);
 
 int Fl_lock(void);
@@ -236,6 +238,8 @@ const char *Fl_event_clipboard_type(void);
 int Fl_clipboard_contains(const char *type);
 
 void Fl_event_dispatch(int (*cb)(int event, void *));
+
+void Fl_add_system_handler(Fl_System_Handler handler, void *data);
 
 #ifdef __cplusplus
 }
